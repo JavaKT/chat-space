@@ -15,9 +15,9 @@
 # usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id |integer|null: false|
 |name|string|null: false|
 |e-mail|string|null: false|
+|password|string|null: false|
 |group_id|integer|null: true, foreign_key: true|
 
 ### Association
@@ -26,7 +26,6 @@
 # groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
 |user_id|integer|null: false,foreign_key: true|
 |message_id|integer|null: false,foreign_key: true|
@@ -38,7 +37,6 @@
 # messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false,foreign_key: true|
 |body|text|null: false|
