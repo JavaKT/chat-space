@@ -1,4 +1,5 @@
 # README
+
 # groups_usersテーブル
 
 |Column|Type|Options|
@@ -9,3 +10,13 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+
+# usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id |integer|null: false|
+|name|string|null: false|
+|e-mail|string|null: false|
+|group_id|integer|null: true|
+
