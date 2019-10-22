@@ -20,3 +20,18 @@
 |e-mail|string|null: false|
 |group_id|integer|null: true|
 
+### Association
+- has many :groups
+
+# groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|name|string|null: false|
+|user_id|integer||null: false|
+|message_id|integer|null: false|
+
+### Associtaion
+- has many :users
+- has many :messages
+
