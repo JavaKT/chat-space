@@ -35,3 +35,17 @@
 - has many :users
 - has many :messages
 
+# messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
+|body|text|null false|
+|image|string|null true|
+
+### Association
+- belongs_to :user
+
+
+
