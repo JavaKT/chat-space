@@ -21,18 +21,18 @@
 |group_id|integer|null: true|
 
 ### Association
-- has many :groups
+- has many :groups,through :groups_users
 
 # groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
 |name|string|null: false|
-|user_id|integer||null: false|
+|user_id|integer|null: false|
 |message_id|integer|null: false|
 
 ### Associtaion
-- has many :users
+- has many :users,through :groups_users
 - has many :messages
 
 # messagesテーブル
