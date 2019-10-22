@@ -21,7 +21,7 @@
 |group_id|integer|null: true, foreign_key: true|
 
 ### Association
-- has many :groups,through :groups_users
+- has_many :groups,through :groups_users
 
 # groupsテーブル
 |Column|Type|Options|
@@ -31,8 +31,8 @@
 |message_id|integer|null: false,foreign_key: true|
 
 ### Associtaion
-- has many :users,through :groups_users
-- has many :messages
+- has_many :users,through :groups_users
+- has_many :messages
 
 # messagesテーブル
 |Column|Type|Options|
