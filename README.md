@@ -18,7 +18,7 @@
 |id |integer|null: false|
 |name|string|null: false|
 |e-mail|string|null: false|
-|group_id|integer|null: true|
+|group_id|integer|null: true, foreign_key: true|
 
 ### Association
 - has many :groups,through :groups_users
@@ -28,8 +28,8 @@
 |------|----|-------|
 |id|integer|null: false|
 |name|string|null: false|
-|user_id|integer|null: false|
-|message_id|integer|null: false|
+|user_id|integer|null: false,foreign_key: true|
+|message_id|integer|null: false,foreign_key: true|
 
 ### Associtaion
 - has many :users,through :groups_users
@@ -39,13 +39,13 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
-|body|text|null false|
-|image|string|null true|
+|user_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
+|body|text|null: false|
+|image|string|null: true|
 
 ### Association
-- belongs_to :user
+- belongs_to :group
 
 
 
