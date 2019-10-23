@@ -36,8 +36,8 @@
 |------|----|-------|
 |user_id|references|null: false,foreign_key: true|
 |group_id|references|null: false,foreign_key: true|
-|body|text|null: false|
-|image|string|null: true|
+|body|text|
+|image|string|
 
 ### Association
 - belongs_to :group
