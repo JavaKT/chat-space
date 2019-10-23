@@ -14,10 +14,10 @@
 # usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: ture|
 |e-mail|string|null: false|
 |password|string|null: false|
-|group_id|integer|null: true, foreign_key: true|　←これは削除
+
 
 ### Association
 - has_many :groups,through: :groups_users
