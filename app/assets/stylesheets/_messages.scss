@@ -113,32 +113,43 @@
       &__input{
         display: flex;
         &__box{
-
-        width: calc(100% - 115px);
+          width: calc(100% - 115px);
+          height: 50px;
           input.input{
           height: 50px;
           width: 100%;
-          padding: 0 40px 0 10px;
+          padding: 0 0 0 10px;
           color: #434a54;
           border-style: none;
           box-sizing: border-box;
-          }
         }
+          &--icon {
+            font-size: 1.3rem;
+            cursor: pointer;
+            position: absolute;
+            float: right;
+            background-color: #ffffff;
+            height: 50px;
+            padding:15px 10px 0 0;
+          }
+        
+        }
+      }
         input.submit {
         width: 100px;
         height: 50px;
-        margin-left: 15px;
+        padding: 0 30px;
         background-color: #38aef0;
         color: white;
-        position: absolute;
         right: 40px;
         display:block;
-      
+        margin-left: 45px;
+       
         }
       }
     }
   }
-}
+
 
       
     
