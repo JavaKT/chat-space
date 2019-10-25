@@ -11,11 +11,7 @@
           Groupname
         .chat__side__group__id__messages 
           messages
-      .chat__side__group__id
-        .chat__side__group__id__name
-          Groupname
-        .chat__side__group__id__messages 
-          messages
+
   .chat__main
     .chat__main__header
       .chat__main__header__name  
@@ -29,6 +25,11 @@
           %p.name java
           %p.timestamp Timestamps
         %p.text Got Damn it!!
+    .chat__main__post
+      .chat__main__post__input
+        .chat__main__post__input__box
+          %input.input
+        %input.submit{:type => "submit", :value => "Send"}
 
 
       

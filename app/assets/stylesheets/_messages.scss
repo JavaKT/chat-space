@@ -1,13 +1,11 @@
-
+*{
+  box-sizing: border-box;
+  }
 .chat {
-  height: 100vh;
   width: 100vw;
-  display: flex;
-
   &__side {
-      height:100vh;
       width: 300px;
-      background-color: #253141;
+      float: left;
 
     &__header {
         height:100px;
@@ -15,6 +13,7 @@
         color: #ffffff;
         align-items: center;
         padding: 0 20px;
+        background-color: #253141;
 
        p.original{
           font-size: 16px;
@@ -48,8 +47,8 @@
         }
       }
   &__main{
-    height: 100vh;
     width:calc(100vw - 300px);
+    float:left;
 
     &__header{
       height: 100px;
@@ -81,11 +80,11 @@
     }
     &__content{
       height: calc(100vh - 190px);
-      padding: 46px 40px;
+      padding: 0 40px;
       background-color: #fafafa;
       overflow: scroll;
       &__message {
-        padding-bottom: 40px;
+        padding-top: 40px;
         &__name {
           padding-bottom:10px;
           display: flex;
@@ -107,10 +106,43 @@
         }
       }
     }
+    &__post{
+      height: 90px;
+      padding: 20px 40px 0;
+      background-color: #ddd;
+      &__input{
+        display: flex;
+        &__box{
+
+        width: calc(100% - 115px);
+          input.input{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+          box-sizing: border-box;
+          }
+        }
+        input.submit {
+        width: 100px;
+        height: 50px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        position: absolute;
+        right: 40px;
+        display:block;
+      
+        }
+      }
+    }
   }
 }
+
       
     
+
 
       
       
