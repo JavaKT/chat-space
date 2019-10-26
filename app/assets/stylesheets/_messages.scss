@@ -131,11 +131,10 @@
               top: 10px;
               right: 10px;
               cursor: pointer;
+            .imageicon{
+                display: none;
+                }
             }
-          .upload-icon{
-            display: none;
-
-          }
           }
         input.send {
           width: 100px;
