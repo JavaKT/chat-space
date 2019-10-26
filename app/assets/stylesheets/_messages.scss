@@ -15,14 +15,17 @@
         padding: 0 20px;
         background-color: #253141;
 
-       p.original{
+        p.original{
           font-size: 16px;
           font-weight: bold;
           width:100%;
           }
       
-      &--icon{
-          margin-left: 0.3rem;
+        &__icon{
+          &--font{
+            margin-left: 0.3rem;
+            color: #ffffff;
+          }
         }  
       }
     &__group{
@@ -144,6 +147,7 @@
         right: 40px;
         display:block;
         margin-left: 45px;
+        cursor: pointer;
        
         }
       }
