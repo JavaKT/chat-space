@@ -125,13 +125,17 @@
             color: #434a54;
             border-style: none;
           }
-          &--icon{
+          .label{
               font-size: 1.3rem;
               position: absolute;
-              top: 15px;
+              top: 10px;
               right: 10px;
               cursor: pointer;
             }
+          .upload-icon{
+            display: none;
+
+          }
           }
         input.send {
           width: 100px;
