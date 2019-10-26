@@ -31,8 +31,5 @@
       .chat__main__post__input
         .chat__main__post__input__box
           %input.input{:placeholder => "type a message"}
-          = fa_icon "image" , class:"chat__main__post__input__box--icon"
-        %input.submit{:type => "submit", :value => "Send"}
-       
-
-      
+            = fa_icon "image" , class:"chat__main__post__input__box--icon"
+        %input.send{:type => "submit",:value => "Send"}

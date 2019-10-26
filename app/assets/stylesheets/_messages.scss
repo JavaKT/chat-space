@@ -111,58 +111,39 @@
     }
     &__post{
       height: 90px;
-      padding: 20px 40px 0;
+      padding: 20px 40px;
       background-color: #ddd;
       &__input{
         display: flex;
         &__box{
-          width: calc(100% - 115px);
-          height: 50px;
-          input.input{
-          height: 50px;
+          position: relative;
           width: 100%;
-          padding: 0 0 0 10px;
-          color: #434a54;
-          border-style: none;
-          box-sizing: border-box;
-        }
-          &--icon {
-            font-size: 1.3rem;
-            cursor: pointer;
-            position: absolute;
-            float: right;
-            background-color: #ffffff;
+          input.input {
             height: 50px;
-            padding:15px 10px 0 0;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            color: #434a54;
+            border-style: none;
           }
-        
+          &--icon{
+              font-size: 1.3rem;
+              position: absolute;
+              top: 15px;
+              right: 10px;
+              cursor: pointer;
+            }
         }
-      }
-        input.submit {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        background-color: #38aef0;
-        color: white;
-        right: 40px;
-        display:block;
-        margin-left: 45px;
-        cursor: pointer;
-       
+        input.send {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          background-color: #38aef0;
+          color: white;
+          right: 40px;
+          cursor: pointer;
         }
       }
     }
   }
-
-
-      
-    
-
-
-      
-      
-
-
-
-
-
+}
+ 
