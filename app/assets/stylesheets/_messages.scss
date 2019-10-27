@@ -25,6 +25,8 @@
           &--font{
             margin-left: 0.3rem;
             color: #ffffff;
+            cursor: pointer;
+
           }
         }  
       }
@@ -126,13 +128,13 @@
             border-style: none;
           }
           .label{
-              font-size: 1.3rem;
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              cursor: pointer;
-            .imageicon{
-                display: none;
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            input{
+              display: none;
                 }
             }
           }

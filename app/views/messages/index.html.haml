@@ -24,14 +24,14 @@
     .chat__main__content
       .chat__main__content__message
         .chat__main__content__message__name
-          %p.name java
+          %p.name Kota Ito
           %p.timestamp Timestamps
-        %p.text Got Damn it!!
+        %p.text Hello World
     .chat__main__post
       .chat__main__post__input
         .chat__main__post__input__box
           %input.input{:placeholder => "type a message"}
-          %label.label
+          %label.label{for: "upload-icon"}
             = fa_icon "image"
-            = file_field :image, class: "imageicon"
+            %input{type: "file",id: "upload-icon"} 
         %input.send{:type => "submit",:value => "Send"}
