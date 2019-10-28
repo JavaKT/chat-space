@@ -6,10 +6,10 @@
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key:true|
 
+
 ### Association
 - belongs_to :group
 - belongs_to :user
-
 
 # usersテーブル
 |Column|Type|Options|
@@ -22,6 +22,7 @@
 - has_many :groups,through: :groups_users
 - has_many :groups
 - has_many :messages
+
 
 # groupsテーブル
 |Column|Type|Options|
