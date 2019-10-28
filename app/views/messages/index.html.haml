@@ -4,19 +4,19 @@
     .chat__side__header
       %p.original
         = current_user.name
-      =link_to new_group_path(current_user)   do
+      =link_to new_group_path(current_user) do
         = fa_icon "edit" , class:"chat__side__header__icon--font"
       =link_to edit_user_path(current_user) do
         = fa_icon "cog",   class:"chat__side__header__icon--font"
 
     .chat__side__group
       - current_user.groups.each do |group|
-      .chat__side__group__id
-        = link_to "#" do
-        .chat__side__group__id__name
-          = group.name
-        .chat__side__group__id__messages 
-          まだメッセージはありません
+        .chat__side__group__id
+          = link_to "#" ,style:"text-decoration: none;" do
+            .chat__side__group__id__name
+              = group.name
+            .chat__side__group__id__messages 
+              まだメッセージはありません。
    
 
   .chat__main
@@ -25,7 +25,7 @@
         %p.username Username
         %p.member group members
       .chat__main__header__edit
-        Edit
+        
           
     .chat__main__content
       .chat__main__content__message

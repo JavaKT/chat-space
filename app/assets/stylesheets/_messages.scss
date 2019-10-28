@@ -39,14 +39,18 @@
         font-weight: lighter;
         &__id{
           padding-bottom:40px;
-        
-          &__name {
-            font-size: 15px;
-            padding-bottom: 5px;
-          }
-          &__messages {
-            font-size: 11px;
-          }
+          
+      
+            &__name {
+              color:white;
+              font-size: 15px;
+              padding-bottom: 5px;
+            }
+            &__messages {
+              color:white;
+              font-size: 11px;
+            
+            }
         }
 
         }
