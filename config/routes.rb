@@ -6,6 +6,6 @@ root to: "messages#index"
 
   resources :messages, only: [:index]
   resources :users, only: [:edit, :update]
- 
+  resources :groups, only: [:new, :create, :edit, :update,]c
 
 end
