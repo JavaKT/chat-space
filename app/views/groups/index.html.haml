@@ -12,7 +12,7 @@
     .chat__side__group
       - current_user.groups.each do |group|
         .chat__side__group__id
-          = link_to messages_path(group) ,style:"text-decoration: none;" do
+          = link_to group_messages_path(group)  ,style:"text-decoration: none;" do
             .chat__side__group__id__name
               = group.name
             .chat__side__group__id__messages 
