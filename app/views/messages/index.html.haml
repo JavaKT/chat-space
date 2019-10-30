@@ -11,18 +11,15 @@
           - @group.users.each do |user|
             = user.name
       .chat__main__header__edit
-        =link_to edit_group_path(current_user)  do
+        =link_to edit_group_path(current_user) ,class:"chat__main__header__edit__text" do
           %p Edit
     .chat__main__content
       .chat__main__content__message
         = render partial:"layouts/message" ,collection: @messages
     .chat__main__post
-      .chat__main__post__input
-        .chat__main__post__input__box
-          = form_for [@group,@message] do |f|
-            = f.text_field :body, class: "input", placeholdoer: "type a message"
-            .chat__main__post__input__box__image
-              =f.label :image, class: "chat__main__post__input__box__image__icon" do
-                = fa_icon "image", class: "icon"
-                = f.file_field :image, class: "hidden" 
-            = f.submit 'Send', class: "submit"
+      = form_for [@group,@message] do |f|  
+        = f.text_field :body, class: "input", placeholder: "type a message"
+        = f.label :image, class: "form" do
+          = fa_icon "image", class: "icon"
+          = f.file_field :image, class: "hidden" 
+        = f.submit 'Send', class: "submit"

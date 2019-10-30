@@ -47,7 +47,7 @@
             &__messages {
               color:white;
               font-size: 11px;
-            
+
             }
         }
 
@@ -87,7 +87,7 @@
         margin-top: 30px;
         position: absolute;
         right: 40px;
-        p{
+        &__text{
           color:#38aef0;
           text-decoration: none ;
         }
@@ -95,7 +95,7 @@
     }
     &__content{
       height: calc(100vh - 190px);
-      padding: 0 40px;
+      padding: 40px;
       background-color: #fafafa;
       overflow: scroll;
       &__message {
@@ -125,30 +125,34 @@
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
-      &__input{
-        display:flex;
-        &__box{
-          position: relative;
-          width: 100%;
-          input{
-            height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
-            color: #434a54;
-            border-style: none;
-          }
-          &__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
+          .new_message{
+            display: flex;
+            .input{
+              height: 50px;
+              padding: 0 40px 0 10px;
+              color: #434a54;
+              border-style: none;
+              position:absolute;
+              width:865px;
+          
+              
+              }
             
-            .hidden{
+            .form{
+            font-size: 1.3rem;
+            top: 10px;
+            left: 835px;
+            cursor: pointer;
+            position:relative;
+            width:100%;
+            
+
+              .hidden{
               display: none;
+              }
             }
-          }
-        .submit{
+
+          .submit{
           width: 100px;
           height: 50px;
           background-color: #38aef0;
@@ -157,11 +161,10 @@
           right:40px;
           margin-left:15px;
           cursor: pointer;
-          float:left;
-          } 
-        
+          
+          }
+        } 
       }
     }
   }
-}
-}
+

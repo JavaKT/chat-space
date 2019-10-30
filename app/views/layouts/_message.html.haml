@@ -1,9 +1,9 @@
 
 .chat__main__content__message__name
   .chat__main__content__message__name--namae
-  = message.user.name
-  .chat__main__content__message__name__date
-  = message.created_at.strftime("%Y/%m/%d %H:%M")
+    = message.user.name
+  .chat__main__content__message__name--date
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
 .chat__main__content__message__body
   - if message.body.present? 
     %p.lower-message__content
