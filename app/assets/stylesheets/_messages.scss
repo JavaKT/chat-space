@@ -61,10 +61,13 @@
       height: 100px;
       padding:0 40px;
       border-bottom: solid 1px #eee; 
+      overflow:scroll;
+      display: flex;
 
-      &__name{
-        overflow:hidden;
-        p.username{
+      &__left{
+      
+
+        p.name{
           font-size: 20px;
           color: #333333;
           margin: 35px 0 15px;
@@ -84,6 +87,10 @@
         margin-top: 30px;
         position: absolute;
         right: 40px;
+        p{
+          color:#38aef0;
+          text-decoration: none ;
+        }
       }  
     }
     &__content{
