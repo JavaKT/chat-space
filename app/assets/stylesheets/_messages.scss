@@ -39,8 +39,6 @@
         font-weight: lighter;
         &__id{
           padding-bottom:40px;
-          
-      
             &__name {
               color:white;
               font-size: 15px;
@@ -97,18 +95,18 @@
         &__name {
           padding-bottom:10px;
           display: flex;
-          p.name {
+          &--namae {
             color: #434a54;
             font-size: 16px;
             font-weight: bold;
           }
-          p.timestamp {
+          &__date{
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
           }
         }
-        p.text {
+        &__body {
           color: #434a54;
           font-size: 14px;
           margin-bottom: 10px;
@@ -137,10 +135,9 @@
             top: 10px;
             right: 10px;
             cursor: pointer;
+            
             .hidden{
               display: none;
-              
-                }
             }
           }
         .submit{
@@ -152,9 +149,11 @@
           right:40px;
           margin-left:15px;
           cursor: pointer;
-        }
+          float:left;
+          } 
+        
       }
     }
   }
 }
- 
+}

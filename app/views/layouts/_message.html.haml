@@ -1,9 +1,12 @@
-.chat__main
-    .chat__main__header
-      .chat__main__header__name  
-        %p.username Username
-        %p.member group members
-      .chat__main__header__edit
-        Edit!
-          
-    
+
+.chat__main__content__message__name
+  .chat__main__content__message__name--namae
+  = message.user.name
+  .chat__main__content__message__name__date
+  = message.created_at.strftime("%Y/%m/%d %H:%M")
+.chat__main__content__message__body
+  - if message.body.present? 
+    %p.lower-message__content
+    = message.body
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+

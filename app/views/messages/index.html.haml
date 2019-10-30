@@ -1,21 +1,18 @@
 
 .chat
-  = render "layouts/sidebar"
-
+  = render partial:"layouts/sidebar" ,locals: { group: @group,message: @message }
   .chat__main
     .chat__main__header
       .chat__main__header__name  
         %p.username Username
         %p.member group members
       .chat__main__header__edit
-        Edit!
-          
+        =link_to edit_group_path(current_user)  do
+          %p Edit
     .chat__main__content
       .chat__main__content__message
-        .chat__main__content__message__name
-          %p.name 
-          %p.timestamp Timestamps
-        %p.text Hello World
+        = render partial:"layouts/message" ,collection: @messages
+
     .chat__main__post
       .chat__main__post__input
         .chat__main__post__input__box
@@ -24,5 +21,5 @@
             .chat__main__post__input__box__image
               =f.label :image, class: "chat__main__post__input__box__image__icon" do
                 = fa_icon "image", class: "icon"
-                = f.file_field :image, class: "hidden"
-        %input.submit{type:"submit", value: "Send"}
+                = f.file_field :image, class: "hidden" 
+            = f.submit 'Send', class: "submit"
