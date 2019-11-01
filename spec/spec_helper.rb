@@ -93,4 +93,8 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+# require "active_record/railtie"
+# require "action_controller/railtie"
+
 end
