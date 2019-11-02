@@ -125,30 +125,33 @@
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
-          .new_message{
-            display: flex;
-            .input{
-              height: 50px;
-              padding: 0 40px 0 10px;
-              color: #434a54;
-              border-style: none;
-              position:absolute;
-              width:865px;
-          
-              
-              }
-            
-            .form{
-            font-size: 1.3rem;
-            top: 10px;
-            left: 835px;
-            cursor: pointer;
-            position:relative;
-            width:100%;
-            
+         form{
+          display: flex;    
+            .field_with_erros{
+              width:100%;
+            }
 
-              .hidden{
-              display: none;
+              .input{
+                height: 50px;
+                padding: 0 40px 0 10px;
+                color: #434a54;
+                border-style: none;
+                width:100%;
+                box-sizing: border-box;
+                }
+              
+          
+              .form{
+              font-size: 1.3rem;
+              top: 10px;
+              cursor: pointer;
+              background-color: #fff;
+              padding:15px 5px 15px 0;
+              position: relative;
+
+                .hidden{
+                display: none;
+                }
               }
             }
 
@@ -166,5 +169,5 @@
         } 
       }
     }
-  }
+  
 
