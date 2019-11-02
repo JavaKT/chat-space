@@ -19,7 +19,8 @@
     .chat__main__post
       = form_for [@group,@message] do |f|  
         = f.text_field :body, class: "input", placeholder: "type a message"
-        = f.label :image, class: "form" do
-          = fa_icon "image", class: "icon"
-          = f.file_field :image, class: "hidden" 
+        .chat__main__post__box
+          = f.label :image, class: "form" do
+            = fa_icon "image", class: "icon"
+            = f.file_field :image, class: "hidden" 
         = f.submit 'Send', class: "submit"
