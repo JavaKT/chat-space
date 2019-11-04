@@ -8,17 +8,15 @@ $(function(){
                   <p> ${message.body}</p>
                   <img src = ${message.image}>
                 </div>`
-
+  
 
      if (message.image){
-       var html
        image = `<img src = ${message.image}>`
      }else{
        image = "画像はありません"
      }
 
     return html;
-
   }
 
 
@@ -38,10 +36,11 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data)
-      $(".chat__main__content").append(html);
+      $(".chat__main__content").append(html).trigger("create")
       $("#new_message").val("");
-      $(".form");
+      $("#new_message").replaceWith($("#new_message").clone(true));
       $("#newmessage").prop("disabled", false);
+      $(".chat__main__content").animate({scrollTop:$(".chat__main__content")[0].scrollHeight});
       
     })
     .fail(function() {
@@ -49,3 +48,4 @@ $(function(){
     });
   });
 });
+
