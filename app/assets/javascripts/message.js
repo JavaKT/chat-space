@@ -1,24 +1,23 @@
 $(function(){
   function buildHTML(message){
-
-    var html =  `<div>
-                  <div> ${message.user_name} </div><div> ${message.created_at} </div>
-                </div>
-                <div>
-                  <p> ${message.body}</p>
-                  <img src = ${message.image}>
-                </div>`
+    var img = ""
+  if (message.image == null ){
+    img = ``
+    } else {
+    img =`<img src = ${message.image} >`
+  }
   
-
-     if (message.image){
-       image = `<img src = ${message.image}>`
-     }else{
-       image = "画像はありません"
-     }
+    var html =  `<div class = "chat__main__content__message__name">
+                  <div  class = "chat__main__content__message__name--namae"> ${message.user_name} </div>
+                  <div  class = "chat__main__content__message__name--date"> ${message.created_at} </div>
+                </div>
+                <div class = "chat__main__content__message__body">
+                  <p> ${message.body}</p>
+                  ${img}
+                </div>`
 
     return html;
   }
-
 
 
   $("#newmessage").click("submit",function(e){
@@ -36,9 +35,8 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data)
-      $(".chat__main__content").append(html).trigger("create")
-      $("#new_message").val("");
-      $(".hidden").replaceWith($(".hidden").clone(true));
+      $(".chat__main__content__message").append(html)
+      $("#new_message")[0].reset();
       $("#newmessage").prop("disabled", false);
       $(".chat__main__content").animate({scrollTop:$(".chat__main__content")[0].scrollHeight});
       
@@ -48,4 +46,3 @@ $(function(){
     });
   });
 });
-
