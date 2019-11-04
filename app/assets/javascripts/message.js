@@ -38,7 +38,7 @@ $(function(){
       var html = buildHTML(data)
       $(".chat__main__content").append(html).trigger("create")
       $("#new_message").val("");
-      $("#new_message").replaceWith($("#new_message").clone(true));
+      $(".hidden").replaceWith($(".hidden").clone(true));
       $("#newmessage").prop("disabled", false);
       $(".chat__main__content").animate({scrollTop:$(".chat__main__content")[0].scrollHeight});
       
