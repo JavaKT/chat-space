@@ -41,4 +41,24 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     });
   });
+
+    var reloadMessages = function() {
+      last_name_id = $("chat__main__content__message__name").data("id")
+      last_body_id = $("chat__main__content__message__body").data("id")
+
+      $.ajax({
+        url: "api/messages",
+        type: "GET",
+        dataType: "json",
+        data: {id: last_name_id},
+        data: {id: last_body_id},
+
+      })
+      .done(function(messages){
+        console.log("success");
+      })
+      fail(function() {
+        console.log("error");
+      });
+    };
 });

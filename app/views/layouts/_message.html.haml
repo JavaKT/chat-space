@@ -1,10 +1,10 @@
 
-.chat__main__content__message__name
+.chat__main__content__message__name{data: {id: message.id}}
   .chat__main__content__message__name--namae
     = message.user.name
   .chat__main__content__message__name--date
     = message.created_at.strftime("%Y/%m/%d %H:%M")
-.chat__main__content__message__body
+.chat__main__content__message__body{data: {id: message.id}}
   - if message.body.present? 
     %p.lower-message__content
     = message.body
