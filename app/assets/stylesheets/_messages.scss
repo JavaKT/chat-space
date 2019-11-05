@@ -4,39 +4,38 @@
 .chat {
   width: 100vw;
   &__side {
-      width: 300px;
-      float: left;
+    width: 300px;
+    float: left;
 
     &__header {
-        height:100px;
-        display: flex;
-        color: #ffffff;
-        align-items: center;
-        padding: 0 20px;
-        background-color: #253141;
+      height:100px;
+      display: flex;
+      color: #ffffff;
+      align-items: center;
+      padding: 0 20px;
+      background-color: #253141;
 
-        p.original{
-          font-size: 16px;
-          font-weight: bold;
-          width:100%;
-          }
+      p.original{
+        font-size: 16px;
+        font-weight: bold;
+        width:100%;
+        }
       
         &__icon{
           &--font{
             margin-left: 0.3rem;
             color: #ffffff;
             cursor: pointer;
-
           }
         }  
-      }
+    }
     &__group{
-        background-color: #2f3e51;
-        height: calc(100vh - 100px);
-        overflow: scroll;
-        padding: 20px 20px 0;
-        color:#ffffff;
-        font-weight: lighter;
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      overflow: scroll;
+      padding: 20px 20px 0;
+      color:#ffffff;
+      font-weight: lighter;
         &__id{
           padding-bottom:40px;
             &__name {
@@ -47,12 +46,11 @@
             &__messages {
               color:white;
               font-size: 11px;
-
             }
-        }
-
+          }
         }
       }
+
   &__main{
     width:calc(100vw - 300px);
     float:left;
@@ -65,8 +63,6 @@
       display: flex;
 
       &__left{
-      
-
         p.name{
           font-size: 20px;
           color: #333333;
@@ -125,7 +121,7 @@
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
-         form{
+        form{
           display: flex;    
             .field_with_erros{
               width:100%;
@@ -142,20 +138,19 @@
               
           
               .form{
-              font-size: 1.3rem;
-              top: 10px;
-              cursor: pointer;
-              background-color: #fff;
-              padding:15px 5px 15px 0;
-              position: relative;
+                font-size: 1.3rem;
+                top: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                padding:15px 5px 15px 0;
+                position: relative;
 
                 .hidden{
-                display: none;
+                  display: none;
                 }
               }
             }
-
-          #newmessage{
+        #newmessage{
           width: 100px;
           height: 50px;
           background-color: #38aef0;
@@ -164,10 +159,9 @@
           right:40px;
           margin-left:15px;
           cursor: pointer;
-          
-          }
-        } 
       }
-    }
-  
+    } 
+  }
+}
+
 
