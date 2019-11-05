@@ -3,11 +3,11 @@ $(function(){
     var img = ""
 {message.image == null? img = ``: img =`<img src = ${message.image} >`};
   
-    var html =  `<div class = "chat__main__content__message__name">
+    var html =  `<div class = "chat__main__content__message__name">{data: {id: message.id}}
                   <div  class = "chat__main__content__message__name--namae"> ${message.user_name} </div>
                   <div  class = "chat__main__content__message__name--date"> ${message.created_at} </div>
                 </div>
-                <div class = "chat__main__content__message__body">
+                <div class = "chat__main__content__message__body">{data: {id: message.id}}
                   <p> ${message.body}</p>
                   ${img}
                 </div>`
@@ -55,10 +55,17 @@ $(function(){
 
       })
       .done(function(messages){
-        console.log("success");
+       var insertHTML = ""
+        messages.forEach(function(message){
+        append buildtHTML(message)
+        $(".chat__main__content").animate({scrollTop:$(".chat__main__content")[0].scrollHeight});
+
+        })
       })
+
       fail(function() {
         console.log("error");
       });
     };
+    setInterval(reloadMessages, 5000);
 });
