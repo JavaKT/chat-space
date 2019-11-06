@@ -19,7 +19,6 @@ class GroupsController < ApplicationController
     end
 
   end
-#editアクションは省略可能　ルーティングとviewが一致しているので！
 
   def update
     if @group.update(group_params)
