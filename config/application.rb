@@ -5,7 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-config.time_zone = 'Asia/Tokyo'
+
 
 module ChatSpace
   class Application < Rails::Application
@@ -15,7 +15,7 @@ module ChatSpace
       g.test_framework false
     config.i18n.default_locale = :ja
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
-
+    config.time_zone = 'Asia/Tokyo'
     end
   end
 end

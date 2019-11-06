@@ -40,7 +40,7 @@ let html = `<input value="${id}" name="group[user_ids][]" type="hidden" id="grou
     type: "GET",    
     url: "/users",       
     dataType:'json',
-    data: {keyword : input},
+    data: {key : input},
    })
 
    .done(function(users){
