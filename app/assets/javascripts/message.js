@@ -3,17 +3,18 @@ $(function(){
     var img = ""
 {message.image == null? img = ``: img =`<img src = ${message.image} >`};
   
-    var html =  `<div class = "chat__main__content__message__name">{data: {id: message.id}}
+    var html =  `<div class = "chat__main__content__message__name" data-id="${message.id}">
                   <div  class = "chat__main__content__message__name--namae"> ${message.user_name} </div>
                   <div  class = "chat__main__content__message__name--date"> ${message.created_at} </div>
                 </div>
-                <div class = "chat__main__content__message__body">{data: {id: message.id}}
+                <div class = "chat__main__content__message__body" data-id="${message.id}">
                   <p> ${message.body}</p>
                   ${img}
                 </div>`
 
     return html;
   }
+
 
 
   $("#newmessage").click("submit",function(e){
@@ -42,30 +43,32 @@ $(function(){
     });
   });
 
-    var reloadMessages = function() {
-      last_name_id = $("chat__main__content__message__name").data("id")
-      last_body_id = $("chat__main__content__message__body").data("id")
+  if(document.URL.match("/messages")){
 
+    var reloadMessages = function() {
+        last_message_id = $(".chat__main__content__message__name:last").data("id")
+      console.log(last_message_id)
       $.ajax({
         url: "api/messages",
-        type: "GET",
+        type: "get",
         dataType: "json",
-        data: {id: last_name_id},
-        data: {id: last_body_id},
-
+        data: {id: last_message_id}
       })
+      
       .done(function(messages){
        var insertHTML = ""
         messages.forEach(function(message){
-        append buildtHTML(message)
+        insertHTML = buildHTML(message);
+        $(".chat__main__content__message").append(insertHTML);
         $(".chat__main__content").animate({scrollTop:$(".chat__main__content")[0].scrollHeight});
-
         })
       })
+      .fail(function() {
+       alert("自動更新できひん");
+      })
+      console.log("XMLHttpRequest : " + XMLHttpRequest.status);
 
-      fail(function() {
-        console.log("error");
-      });
     };
-    setInterval(reloadMessages, 5000);
+  }
+  setInterval(reloadMessages, 5000);
 });
