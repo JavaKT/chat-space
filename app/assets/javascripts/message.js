@@ -63,7 +63,7 @@ $(function(){
         })
       })
       .fail(function() {
-       alert("自動更新できひん");
+       alert("自動更新できませんでした");
       })
     };
   }
