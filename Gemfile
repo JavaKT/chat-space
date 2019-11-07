@@ -72,3 +72,7 @@ gem "devise"
 gem "rails-i18n", "~> 5.1"
 gem "carrierwave", "~> 2.0"
 gem 'mini_magick'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
