@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     var img = ""
-{message.image == null? img = ``: img =`<img src = ${message.image}/>`};
+{message.image == null? img = ``: img =`<img src = ${message.image}>`};
   
     var html =  `<div class = "chat__main__content__message__name" data-id="${message.id}">
                   <div  class = "chat__main__content__message__name--namae"> ${message.user_name} </div>
@@ -14,7 +14,6 @@ $(function(){
 
     return html;
   }
-
 
 
   $("#newmessage").click("submit",function(e){
